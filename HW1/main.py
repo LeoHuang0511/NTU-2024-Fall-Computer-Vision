@@ -17,12 +17,15 @@ for i in range(img.shape[1]):
     rl_img[:,img.shape[1]-i-1] = img[:,i]
 cv2.imwrite('./output/rightleft_img.jpg',rl_img)
 
+
+
 #diagnonally flip
 diag_img = np.empty(img.shape)
 for i in range(img.shape[0]):
     for j in range(img.shape[1]):
-        diag_img[img.shape[0]-i-1,img.shape[1]-j-1] = img[i,j]
+        diag_img[img.shape[0]-i-1,img.shape[1]-j-1] = img[j,i]
 cv2.imwrite('./output/diagflip_img.jpg',diag_img)
+
 
 #rotate
 (h, w) = img.shape[:2]
