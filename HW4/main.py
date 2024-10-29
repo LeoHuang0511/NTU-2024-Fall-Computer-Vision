@@ -77,14 +77,14 @@ cv2.imwrite('./output/erosion.png',img_erosion)
 
 # opening
 def opening(img, kernel):
-    return dilation(erosion(img_bin, kernel), kernel)
+    return dilation(erosion(img, kernel), kernel)
 
 img_opening = opening(img_bin, kernel)
 cv2.imwrite('./output/opening.png',img_opening)
 
 # closing
 def closing(img, kernel):
-    return erosion(dilation(img_bin, kernel), kernel)
+    return erosion(dilation(img, kernel), kernel)
 
 img_closing = closing(img_bin, kernel)
 cv2.imwrite('./output/closing.png',img_closing)

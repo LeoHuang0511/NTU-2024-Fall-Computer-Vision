@@ -72,7 +72,7 @@ NTU CSIE D13922014 黃丰楷
     
     ```python
     def opening(img, kernel):
-        return dilation(erosion(img_bin, kernel), kernel)
+        return dilation(erosion(img, kernel), kernel)
     ```
     
 - Result
@@ -88,7 +88,7 @@ NTU CSIE D13922014 黃丰楷
 
 ```python
 def closing(img, kernel):
-    return erosion(dilation(img_bin, kernel), kernel)
+    return erosion(dilation(img, kernel), kernel)
 ```
 
 - Result
