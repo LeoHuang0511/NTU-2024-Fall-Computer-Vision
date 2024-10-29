@@ -58,7 +58,6 @@ def erosion(img, kernel):
     img_temp = np.zeros(img.shape)
     for i in range(img.shape[0]):
         for j in range(img.shape[1]):
-            # if img[i][j] > 0:
             draw = True
             for (k, l) in kernel:
                 i_d = i + k
